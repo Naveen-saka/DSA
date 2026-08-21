@@ -47,7 +47,7 @@ public:
                 //count the number of elements
                 ll ans = lol(mid*val);
                 if(ans == k) return mid*val;
-                if(ans<=k) l = mid + 1;
+                if(ans<k) l = mid + 1;
                 else r = mid - 1;
             }
             return -1LL;
