@@ -18,7 +18,7 @@ public:
         {
            ll p = 0;
            //if odd size --> add;
-           //if even size --> subact
+           //if even size --> subract
            for(ll i = 1LL;i<(1LL<<n);i++)
            {
                ll m = 1LL;
