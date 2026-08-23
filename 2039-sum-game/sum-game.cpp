@@ -20,12 +20,10 @@ public:
         {
             int ac = (lc-rc)/2;
             int sum = rsum - lsum;
-            if(sum<0) return 1;
             return 9*ac != sum;
         }
         int ac = (rc-lc)/2;
         int sum = lsum - rsum;
-        if(sum<0) return 1;
         return 9*ac != sum;
     }
 };
