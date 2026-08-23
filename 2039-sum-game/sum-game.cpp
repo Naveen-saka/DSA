@@ -16,8 +16,14 @@ public:
         }
         if((lc+rc)&1) return 1;
         if(lsum == rsum) return lc != rc;
-        int diff = (lsum-rsum);
+        if(lc > rc)
+        {
+            int ac = (lc-rc)/2;
+            int sum = rsum - lsum;
+            return 9*ac != sum;
+        }
         int ac = (rc-lc)/2;
-        return (9*ac)!=diff;
+        int sum = lsum - rsum;
+        return 9*ac != sum;
     }
 };
