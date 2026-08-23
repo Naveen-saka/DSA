@@ -16,6 +16,7 @@ public:
         }
         if((lc+rc)&1) return 1;
         if(lsum == rsum) return lc != rc;
+        if(((lc>rc)&&(lsum>rsum)) || ((lc<rc)&&(lsum<rsum))) return 1;
         if(lc > rc)
         {
             int ac = (lc-rc)/2;
