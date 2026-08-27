@@ -26,6 +26,7 @@ public:
                 string m = cur;
                 for(auto &p:mp) m.append(p.second,p.first);
                 ans = min(ans,m);
+                return;
                 cur.pop_back();
                 b++;
             }
