@@ -1,5 +1,6 @@
 class Solution {
 public:
+    int v = 0;
     string ans = string(301,'z');
     char chu = '#';
     void go(int i,auto &t,auto &mp,string cur)
@@ -22,6 +23,7 @@ public:
                 cur+=a;
                 b-=2;
                 go(i+1,t,mp,cur); 
+                if(v) return;
                 cur.pop_back();
                 b+=2;
             }
@@ -36,6 +38,7 @@ public:
                 reverse(r.begin(),r.end());
                 if(chu!='#') m+=chu;
                 m+=r;
+                v = 1;
                 ans = min(ans,m);
                 return;
             }
