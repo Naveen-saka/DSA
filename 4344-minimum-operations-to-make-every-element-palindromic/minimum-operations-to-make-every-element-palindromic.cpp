@@ -1,6 +1,6 @@
 using ll = long long;
 static vector<ll>pre[2];
-int init = []()
+auto init = []()
 {
         for(int i=1;i<=100000;i++)
         {
