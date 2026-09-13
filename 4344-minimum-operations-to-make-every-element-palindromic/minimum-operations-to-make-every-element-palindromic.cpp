@@ -4,19 +4,19 @@ auto init = []()
 {
         for(int i=1;i<=100000;i++)
         {
-        string cur = to_string(i);
-        string lol = cur;
-        reverse(lol.begin(),lol.end());
-        string oddlen = cur.substr(0,cur.size()-1) + lol;
-        string evenlen = cur + lol;
-        ll v1 = stoll(oddlen);
-        ll v2 = stoll(evenlen); 
-        if(v1 < 1e9 ) pre[v1&1].push_back(v1);
-        if(v2 < 1e9 ) pre[v2&1].push_back(v2);
+            string cur = to_string(i);
+            string lol = cur;
+            reverse(lol.begin(),lol.end());
+            string oddlen = cur.substr(0,cur.size()-1) + lol;
+            string evenlen = cur + lol;
+            ll v1 = stoll(oddlen);
+            ll v2 = stoll(evenlen); 
+            pre[v1&1].push_back(v1);
+            pre[v2&1].push_back(v2);
         }
-    sort(pre[0].begin(),pre[0].end());
-    sort(pre[1].begin(),pre[1].end());
-    return 0;
+            sort(pre[0].begin(),pre[0].end());
+            sort(pre[1].begin(),pre[1].end());
+            return 0;
 }();
 class Solution {
 public:
