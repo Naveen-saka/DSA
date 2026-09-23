@@ -3,11 +3,9 @@ public:
     int minOperations(vector<int>& nums, int x) {
         auto &v = nums;
         int n = v.size();
-        vector<int>pre(n,0),suf(n,0);
+        vector<int>pre(n,0);
         pre[0] = v[0];
         for(int i=1;i<n;i++) pre[i] = pre[i-1] + v[i];
-        suf.back() = v.back();
-        for(int i=n-2;i>=0;i--) suf[i] = suf[i+1] + v[i];
         int ans = INT_MAX;
         int sum = 0;
         auto it = binary_search(pre.begin(),pre.end(),x);
